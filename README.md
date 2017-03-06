@@ -7,8 +7,8 @@
 1. 下载biubiubiu.py到任意目录
 2. biubiubiu.py同级必须存在image文件夹，用来存放需要统一缩放的图片
 3. 运行biubiubiu.py，缩放后的图片会放在image的同级目录，注意，没有放在文件夹里，如果图片数量巨大的话，建议新建一个目录，建议目录结构如下：
-···
+```
            -biubiubiu.py
    新建dic-|-image
            - 大量图片
-···
+```
