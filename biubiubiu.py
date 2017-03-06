@@ -20,7 +20,6 @@ def main():
         if a != sys.argv[0]:
             if isinstance(a,tuple):
                 scale = a            
-    print '图片缩放完成！！'
     imageList = os.listdir('./image')
     for index,image in enumerate(imageList):
         if strchr(image,'.jpg') < 0:
@@ -31,7 +30,8 @@ def main():
             str = './image/%s' % image
             im = Image.open(str)
             im.thumbnail(scale)
-            im.save(image,'JPEG')
+            im.save(image,'JPEG') 
+    print '图片缩放完成！！'
 
 if __name__ == '__main__':
     main()
