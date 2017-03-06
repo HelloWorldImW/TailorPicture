@@ -10,5 +10,5 @@
 ```
            -biubiubiu.py
    新建dic-|-image
-           - 大量图片
+           - 生成的大量图片
 ```
