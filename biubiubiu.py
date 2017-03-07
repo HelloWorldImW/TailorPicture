@@ -21,18 +21,25 @@ def main():
             if isinstance(a,tuple):
                 scale = a            
     imageList = os.listdir('./image')
+    finish = False
+    hasImage = False
     for index,image in enumerate(imageList):
-        if strchr(image,'.jpg') < 0:
+        if strchr(image,'.jpg') >= 0:
+            hasImage = True
             pass
-        elif strchr(image,'.pbg') < 0:
+        if strchr(image,'.png') >= 0:
+            hasImage = True
             pass
-        else:
+        if hasImage:
+            finish = True
             str = './image/%s' % image
             im = Image.open(str)
             im.thumbnail(scale)
-            im.save(image,'JPEG') 
-    print '图片缩放完成！！'
-
+            im.save(image,'JPEG')
+    if finish:
+        print '图片处理完成'
+    else:
+        print '未发现图片'   
 if __name__ == '__main__':
     main()
 
