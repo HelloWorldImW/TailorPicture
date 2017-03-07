@@ -27,7 +27,7 @@ def main():
         if strchr(image,'.jpg') >= 0:
             hasImage = True
             pass
-        if strchr(image,'.png') >= 0:
+        elif strchr(image,'.png') >= 0:
             hasImage = True
             pass
         if hasImage:
